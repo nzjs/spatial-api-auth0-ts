@@ -1,0 +1,93 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1614307609317,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          169.769668579,
+          -43.64054755
+        ]
+      },
+      "properties": {
+        "id": 1614307609317,
+        "ts": 1614206835949,
+        "uid": "",
+        "geom": 0,
+        "name": "Water",
+        "type": "Generic",
+        "image": null,
+        "notes": "Clean water source",
+        "geomstr": "{\"type\":\"Point\",\"coordinates\":[169.76966857910156,-43.64054754952542]}"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1614307667538,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          169.843139648,
+          -43.610228142
+        ]
+      },
+      "properties": {
+        "id": 1614307667538,
+        "ts": 1614206835948,
+        "uid": "",
+        "geom": 0,
+        "name": "Deer",
+        "type": "Sighting",
+        "image": null,
+        "notes": "Near the stream",
+        "geomstr": "{\"type\":\"Point\",\"coordinates\":[169.84313964843747,-43.61022814178641]}"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1614307680188,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          169.745635986,
+          -43.633590349
+        ]
+      },
+      "properties": {
+        "id": 1614307680188,
+        "ts": 1614206835947,
+        "uid": "",
+        "geom": 0,
+        "name": "Tahr",
+        "type": "Sighting",
+        "image": null,
+        "notes": "Group of tahr on the ridgeline, spotted a few times previously",
+        "geomstr": "{\"type\":\"Point\",\"coordinates\":[169.74563598632812,-43.633590349034115]}"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1614310294196,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          169.755635686,
+          -43.633590349
+        ]
+      },
+      "properties": {
+        "id": 1614310294196,
+        "ts": 1614206835947,
+        "uid": "",
+        "geom": 0,
+        "name": "Tahr",
+        "type": "Sighting",
+        "image": null,
+        "notes": "Another group of tahr on the ridgeline",
+        "geomstr": "{\"type\":\"Point\",\"coordinates\":[169.75563568632812,-43.633590349034115]}"
+      }
+    }
+  ]
+}

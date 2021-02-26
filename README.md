@@ -1,4 +1,4 @@
-# Spatial API, Auth0, CRUD, TypeScript
+# Info
 
 This is a boilerplate CRUD API built with Node.js/Express and TypeScript.  
 It has built in authentication using Auth0, and basic support for reading and writing geospatial datasets.

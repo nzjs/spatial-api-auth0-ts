@@ -1,0 +1,26 @@
+{
+  "type": "Generic",
+  "name": "Water",
+  "notes": "Clean water source",
+  "ts": 1614206835949,
+  "image": "",
+  "geomstr": "{\"type\":\"Point\",\"coordinates\":[169.76966857910156,-43.64054754952542]}"
+}
+
+{
+  "type": "Sighting",
+  "name": "Deer",
+  "notes": "Near the stream",
+  "ts": 1614206835948,
+  "image": "",
+  "geomstr": "{\"type\": \"Point\",\"coordinates\":[169.84313964843747,-43.61022814178641]}"
+}
+
+{
+  "type": "Sighting",
+  "name": "Tahr",
+  "notes": "Group of tahr on the ridgeline, spotted a few times previously",
+  "ts": 1614206835947,
+  "image": "",
+  "geomstr": "{\"type\":\"Point\",\"coordinates\":[169.74563598632812,-43.633590349034115]}"
+}
