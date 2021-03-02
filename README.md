@@ -40,7 +40,7 @@ Pass a valid Auth0 token in the header of all requests to the API endpoints.
 Get all pois for user  
 `GET /api/v1/spatial/pois`
 
-Get all pois for user as geojson format 
+Get all pois for user as geojson feature collection  
 `GET /api/v1/spatial/pois?f=geojson`
 
 Get a single poi using an id parameter  
