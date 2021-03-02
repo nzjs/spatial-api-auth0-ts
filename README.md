@@ -1,6 +1,6 @@
 # Info
 
-Node API for working with spatial datasets. Built with Express, Auth0, and TypeScript.  
+Node API for working with spatial datasets in Postgres. Built with Express, Auth0, and TypeScript.  
 It has built in authentication using Auth0, and supports reading and writing geospatial datasets.  
 
 ## Requirements
