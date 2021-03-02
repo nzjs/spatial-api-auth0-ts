@@ -1,7 +1,7 @@
 # Info
 
-This is a boilerplate CRUD API built with Node.js/Express and TypeScript.  
-It has built in authentication using Auth0, and basic support for reading and writing geospatial datasets.
+Node API for working with spatial datasets. Built with Express, Auth0, and TypeScript.  
+It has built in authentication using Auth0, and supports reading and writing geospatial datasets.  
 
 ## Requirements
 
