@@ -19,6 +19,20 @@ const pool = new Pool({
   password: process.env.DB_PASSWORD
 })
 
+// module.exports = {
+//   query: (text: string, params: any) => pool.query(text, params),
+// }
+
 module.exports = {
-  query: (text: string, params: any) => pool.query(text, params),
+  query: async (text: string, params: any) => {
+    const start = Date.now();
+    const pool_query = await pool.query(text, params);
+    const duration = Date.now() - start;
+    console.log('----------------------------------');
+    console.log('Executed query: ', 
+      new Date().toLocaleString('en-AU'), 
+      { text, params, duration }
+    );
+    return pool_query;
+  }
 }
