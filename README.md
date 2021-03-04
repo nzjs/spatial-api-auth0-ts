@@ -5,11 +5,13 @@ It has built in authentication using Auth0, and supports reading and writing geo
 
 ## Requirements
 
-Clone the repo, navigate to the root directory and install via npm. 
+1. Clone the repo, navigate to the root directory and install via npm. 
 
 ```bash
 npm install
 ```
+
+2. Import the sample .sql database into your Postgres environment. 
 
 ## Usage
 
@@ -31,6 +33,8 @@ npm run dev
 ```
 
 ## API Endpoints
+
+Sample json data for creating/updating data is included in the `/tests` folder.
 
 Pass a valid Auth0 token in the header of all requests to the API endpoints.  
 `Authentication: Bearer <token>`
@@ -55,22 +59,22 @@ Update a poi using an id parameter
 Remove a poi using an id parameter  
 `DELETE /api/v1/spatial/pois/:id`
 
-#### Endpoint - Routes - Polyline route track data
+#### Endpoint - Tracks - Polyline route track data
 
-Get all routes for user  
-`GET /api/v1/spatial/routes`
+Get all tracks for user  
+`GET /api/v1/spatial/tracks`
 
 Get a single route using an id parameter  
-`GET /api/v1/spatial/routes/:id`
+`GET /api/v1/spatial/tracks/:id`
 
 Create a new route  
-`POST /api/v1/spatial/routes`
+`POST /api/v1/spatial/tracks`
 
 Update a route using an id parameter  
-`PUT /api/v1/spatial/routes/:id`
+`PUT /api/v1/spatial/tracks/:id`
 
 Remove a route using an id parameter  
-`DELETE /api/v1/spatial/routes/:id`
+`DELETE /api/v1/spatial/tracks/:id`
 
 ## Contributing
 

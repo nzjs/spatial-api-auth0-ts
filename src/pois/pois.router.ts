@@ -5,7 +5,7 @@ import express, { Request, Response } from 'express';
 import * as PS from './pois.service';
 import { BasePOI, UserPOI } from './poi.interface';
 import { authenticationCheck } from '../middleware/auth.middleware';
-import { getAuth0Sub } from '../common/utils';
+import { parseToken, getAuth0Sub } from '../common/utils';
 
 /**
  * POI Router Definition
@@ -21,7 +21,7 @@ PR.use(authenticationCheck);
 // Get all pois for user  
 // `GET /api/v1/spatial/pois`
 PR.get('/', async (req: Request, res: Response) => {
-  const token: string = req.headers.authorization?.split(' ')[1]!;
+  const token: string = parseToken(req.headers);
   const uid: string = await getAuth0Sub(token);
   try {
     // Check for an input format eg. ?f=geojson
@@ -42,12 +42,12 @@ PR.get('/', async (req: Request, res: Response) => {
 // Get a single poi using an id parameter  
 // `GET /api/v1/spatial/pois/:id`
 PR.get('/:id', async (req: Request, res: Response) => {
-  const token: string = req.headers.authorization?.split(' ')[1]!;
+  const token: string = parseToken(req.headers);
   const uid: string = await getAuth0Sub(token);
   const id: number = parseInt(req.params.id, 10);
 
   try {
-    const poi: UserPOI | null = await PS.findUserPOI(uid, id);
+    const poi = await PS.findUserPOI(uid, id);
 
     if (poi) { 
       return res.status(200).send(poi);
@@ -65,7 +65,7 @@ PR.get('/:id', async (req: Request, res: Response) => {
 // Create a new poi  
 // `POST /api/v1/spatial/pois`
 PR.post('/', async (req: Request, res: Response) => {
-  const token: string = req.headers.authorization?.split(' ')[1]!;
+  const token: string = parseToken(req.headers);
   const uid: string = await getAuth0Sub(token);
 
   try {
@@ -81,13 +81,13 @@ PR.post('/', async (req: Request, res: Response) => {
 // Update a poi using an id parameter  
 // `PUT /api/v1/spatial/pois/:id`
 PR.put('/:id', async (req: Request, res: Response) => {
-  const token: string = req.headers.authorization?.split(' ')[1]!;
+  const token: string = parseToken(req.headers);
   const uid: string = await getAuth0Sub(token);
   const id: number = parseInt(req.params.id, 10);
 
   try {
     const base: UserPOI = req.body;
-    const existing: UserPOI = await PS.findUserPOI(uid, id);
+    const existing = await PS.findUserPOI(uid, id);
 
     if (existing) { // It exists, so update it
       const updated = await PS.updateUserPOI(uid, id, base);
@@ -107,7 +107,7 @@ PR.put('/:id', async (req: Request, res: Response) => {
 // Remove a poi using an id parameter  
 // `DELETE /api/v1/spatial/pois/:id`
 PR.delete('/:id', async (req: Request, res: Response) => {
-  const token: string = req.headers.authorization?.split(' ')[1]!;
+  const token: string = parseToken(req.headers);
   const uid: string = await getAuth0Sub(token);
   const id: number = parseInt(req.params.id, 10);
 

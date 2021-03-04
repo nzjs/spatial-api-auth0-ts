@@ -3,8 +3,8 @@
  */
 import { BasePOI, UserPOI } from './poi.interface';
 import { UserPOIs } from './pois.interface';
-import { getAuth0User, _pg_read_poi, _pg_read_pois, _pg_read_pois_as_geojson, 
-  _pg_create_poi, _pg_update_poi, _pg_delete_poi} from '../common/utils';
+import { _pg_read_poi, _pg_read_pois, _pg_read_pois_as_geojson, 
+  _pg_create_poi, _pg_update_poi, _pg_delete_poi} from './pois.queries';
 
 /**
  * Service Methods / Functions for interaction with datastore

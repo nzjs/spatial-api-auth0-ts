@@ -7,7 +7,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 // Custom routers
 import { PR } from './pois/pois.router';
-// import { RR } from './routes/routes.router';
+import { TR } from './tracks/tracks.router';
 // Middleware
 import { errorHandler } from './middleware/error.middleware';
 import { notFoundHandler } from './middleware/notfound.middleware';
@@ -31,17 +31,15 @@ app.use(helmet());
 app.use(cors());
 app.use(express.json());
 
-// Define the endpoint routers 
+// Define the authenticated endpoint routers
 app.use('/api/v1/spatial/pois', PR); 
-// app.use('/api/v1/spatial/routes', RR); 
+app.use('/api/v1/spatial/tracks', TR); 
 
 // Apply middleware after controller/routers
 app.use(errorHandler);
 app.use(notFoundHandler);
 
-/**
- * Run the API
- */
+// Run it
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });

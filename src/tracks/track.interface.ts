@@ -1,5 +1,5 @@
 
-export interface BaseRoute {
+export interface BaseTrack {
   name: string;
   notes: string;
   tsstart: number;
@@ -8,7 +8,7 @@ export interface BaseRoute {
   geomstr: string;
 }
 
-export interface UserRoute extends BaseRoute {
+export interface UserTrack extends BaseTrack {
   id: number;
   uid: string;
 }
