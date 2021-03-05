@@ -5,17 +5,17 @@ It has built in authentication using Auth0, and supports reading and writing geo
 
 ## Requirements
 
-1. Clone the repo, navigate to the root directory and install via npm. 
+1. Install TypeScript + compiler (tsc) via npm.
+
+2. Clone the repo, navigate to the root directory and install via npm.
 
 ```bash
 npm install
 ```
 
-2. Import the sample .sql database into your Postgres environment. 
+3. Import the sample .sql database into your Postgres environment. 
 
-## Usage
-
-1. Create the respective variables in your `.env` file
+4. Create the respective variables in your `.env` file
 ```bash
 PORT=9000
 AUTH0_DOMAIN=
@@ -27,10 +27,20 @@ DB_USERNAME=
 DB_PASSWORD=
 ```
 
-2. Run the development server using the `dev` script
+## Usage
+
+1. Run a development server using the `dev` script
 ```bash
 npm run dev
 ```
+
+2. Run a production server using the `prod` script after compiling index.js
+```bash
+npm run build
+npm run prod
+```
+
+Don't forget to configure PM2 or a similar process manager for production.
 
 ## API Endpoints
 
